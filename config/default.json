@@ -1,0 +1,5 @@
+{
+    "jwtSecret": "secret",
+    "mongoURI": "mongodb://localhost:27017/vehicle_care",
+    "mongodbAtlasUrl": "mongodb+srv://sobiyamary622:aqnqaJ7Ab048iK9y@cluster0.lu92g.mongodb.net/vehicle_care"
+}
