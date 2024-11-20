@@ -3,7 +3,7 @@ const appointmentController = require("../controllers/appointment.controller");
 const authMiddleware = require("../middleware/middleware");
 
 Router.post("/create", authMiddleware, appointmentController.createAppointment);
-Router.get("/getAllAppointment", authMiddleware, appointmentController.getAllAppointment);
+Router.get("/getAllAppointment", appointmentController.getAllAppointment);
 Router.get("/getById/:id", authMiddleware, appointmentController.getById);
 Router.put("/update/:id", authMiddleware, appointmentController.updateAppintment);
 Router.delete("/:id", authMiddleware, appointmentController.deleteAppointment);
