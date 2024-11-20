@@ -6,7 +6,7 @@ const mongoURI = config.get("mongoURI");
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(mongodbAtlasUrl);
+        await mongoose.connect(mongoURI);
         console.log("Mongodb Connected...");
     } catch (err) {
         console.log(err.message);
