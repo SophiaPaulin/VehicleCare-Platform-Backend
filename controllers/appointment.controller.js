@@ -12,6 +12,8 @@ module.exports.createAppointment = async (req, res) => {
             appointmentTime: req.body.appointmentTime || new Date(),
             status: req.body.status || "Scheduled"
         };
+        console.log("Appointment Data to Save:", appointmentData);
+        
         const response = await Appointment.create(appointmentData);
         if (response) {
             return res.status(200).json({
