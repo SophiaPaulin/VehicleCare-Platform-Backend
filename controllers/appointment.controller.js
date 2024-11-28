@@ -34,9 +34,10 @@ module.exports.createAppointment = async (req, res) => {
     }
 };
 
-module.exports.getAllAppointment = async (req, res) => {
+module.exports.getAppointments = async (req, res) => {
     try {
         const result = await Appointment.find({});
+        console.log({result})
         if (result.length > 0) {
             let appointmentDatas = [];
             for (let index = 0; index < result.length; index++) {
@@ -68,8 +69,8 @@ module.exports.getAllAppointment = async (req, res) => {
                 status: true
             });
         } else {
-            return res.status(404).json({
-                message: " Something went wrong!",
+            return res.status(200).send({
+                message: "No data found",
                 status: false
             });
         }
