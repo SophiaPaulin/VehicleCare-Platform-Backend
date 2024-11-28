@@ -43,6 +43,7 @@ module.exports.getAllVehicle = async (req, res) => {
                 const ownerData = await Owner.findOne({ _id: item.ownerId });
                 const ownerName = ownerData ? ownerData.firstName + " " + ownerData.lastName : "";
                 datas.push({
+                    _id: item._id,
                     model: item.model,
                     registerationNumber: item.registerationNumber,
                     year: item.year,
